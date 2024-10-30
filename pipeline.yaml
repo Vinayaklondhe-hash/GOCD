@@ -4,15 +4,15 @@ pipelines:
   hello-pipeline:
     group: sample-group
     materials:
-      git:
-        url: 'https://github.com/Vinayaklondhe-hash/GOCD.git'
-        branch: main
+      - git:
+          url: 'https://github.com/Vinayaklondhe-hash/GOCD.git'
+          branch: main
     stages:
-      - hello-stage:
-          jobs:
-            - echo-job:
-                tasks:
-                  - exec:
-                      command: "echo"
-                      arguments:
-                        - "hello"
+      - name: hello-stage  # Correct key for stage name
+        jobs:
+          - name: echo-job  # Correct key for job name
+            tasks:
+              - exec:
+                  command: "echo"
+                  arguments:
+                    - "hello"
