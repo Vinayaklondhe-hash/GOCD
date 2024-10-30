@@ -1,4 +1,0 @@
-# config.yaml
-pipelines:
-  sample-pipeline:
-    file: pipelines/pipeline.yaml
