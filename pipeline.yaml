@@ -1,3 +1,4 @@
+---
 format_version: 1
 pipelines:
   hello-pipeline:
