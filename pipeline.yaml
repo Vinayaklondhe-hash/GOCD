@@ -1,21 +1,17 @@
-format_version: 3
-name: sample-pipeline
-group: sample-group
-materials:
-  - git:
-      type: git
-      url: "https://github.com/Vinayaklondhe-hash/GOCD.git"
-      branch: main
-stages:
-  - name: SampleStage
-    jobs:
-      - name: Job1
-        tasks:
-          - exec:
-              command: "echo"
-              arguments: ["Job1: This is Stage SampleStage"]
-      - name: Job2
-        tasks:
-          - exec:
-              command: "echo"
-              arguments: ["Job2: This is Stage SampleStage"]
+format: yaml
+pipelines:
+  hello-pipeline:
+    group: sample-group
+    materials:
+      git:
+        url: 'https://github.com/Vinayaklondhe-hash/GOCD.git'
+        branch: main
+    stages:
+      - hello-stage:
+          jobs:
+            - echo-job:
+                tasks:
+                  - exec:
+                      command: echo
+                      arguments:
+                        - hello
