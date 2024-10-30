@@ -1,11 +1,6 @@
 format_version: 3
 name: sample-pipeline
 group: sample-group
-materials:
-  - git:
-      type: git
-      url: "https://github.com/Vinayaklondhe-hash/GOCD.git"
-      branch: main
 stages:
   - name: SampleStage
     jobs:
