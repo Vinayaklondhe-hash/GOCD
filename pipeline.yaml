@@ -4,13 +4,13 @@ pipelines:
   hello-pipeline:
     group: sample-group
     materials:
-      - git:
+      - git:  # Ensure this is a list with a dash
           url: 'https://github.com/Vinayaklondhe-hash/GOCD.git'
           branch: main
     stages:
-      - name: hello-stage  # Correct key for stage name
+      - name: hello-stage  # Use 'name' as the key
         jobs:
-          - name: echo-job  # Correct key for job name
+          - name: echo-job  # Use 'name' as the key
             tasks:
               - exec:
                   command: "echo"
